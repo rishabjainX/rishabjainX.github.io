@@ -30,10 +30,28 @@ permalink: /academics/
 
   <div class="course-card">
     <span class="course-grade">A</span>
+    <img class="course-logo" src="{{ '/assets/images/academics/ap-physics-mech.svg' | relative_url }}" alt="">
+    <div class="course-meta">
+      <p class="course-code">AP</p>
+      <h3 class="course-title">Physics C: Mechanics</h3>
+    </div>
+  </div>
+
+  <div class="course-card">
+    <span class="course-grade">A</span>
     <img class="course-logo" src="{{ '/assets/images/academics/ap-physics.svg' | relative_url }}" alt="">
     <div class="course-meta">
       <p class="course-code">AP</p>
-      <h3 class="course-title">Physics C</h3>
+      <h3 class="course-title">Physics C: E&amp;M</h3>
+    </div>
+  </div>
+
+  <div class="course-card">
+    <span class="course-grade">5</span>
+    <img class="course-logo" src="{{ '/assets/images/academics/ap-calc.svg' | relative_url }}" alt="">
+    <div class="course-meta">
+      <p class="course-code">AP</p>
+      <h3 class="course-title">Calculus BC</h3>
     </div>
   </div>
 
@@ -45,15 +63,6 @@ permalink: /academics/
       <h3 class="course-title">Computer Science A</h3>
     </div>
   </div>
-</div>
-
-<div class="results">
-  <div class="result-chip"><span class="result-grade">A</span><span class="result-course">AP United States History</span></div>
-  <div class="result-chip"><span class="result-grade">A</span><span class="result-course">AP Spanish Language</span></div>
-  <span class="result-break" aria-hidden="true"></span>
-  <div class="result-chip"><span class="result-grade">5</span><span class="result-course">AP Calculus BC</span></div>
-  <div class="result-chip"><span class="result-grade">5</span><span class="result-course">AP Chemistry</span></div>
-  <div class="result-chip"><span class="result-grade">5</span><span class="result-course">AP World History</span></div>
 </div>
 
 ## Stack
