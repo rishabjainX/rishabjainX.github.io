@@ -10,7 +10,6 @@ permalink: /academics/
 
 <div class="course-grid">
   <div class="course-card course-card--current">
-    <span class="course-grade course-grade--current">Now</span>
     <img class="course-logo" src="{{ '/assets/images/projects/uiuc.png' | relative_url }}" alt="">
     <div class="course-meta">
       <p class="course-code">MATH 241</p>
