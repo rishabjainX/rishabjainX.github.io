@@ -5,6 +5,7 @@
       <nav class="site-nav" aria-label="Primary">
         <a href="{{ '/' | relative_url }}" {% if page.url == '/' %}class="active" aria-current="page"{% endif %}>Home</a>
         <a href="{{ '/projects/' | relative_url }}" {% if page.url contains '/projects' %}class="active" aria-current="page"{% endif %}>Projects</a>
+        <a href="{{ '/academics/' | relative_url }}" {% if page.url contains '/academics' %}class="active" aria-current="page"{% endif %}>Academics</a>
       </nav>
       <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark mode">
         <svg class="theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
