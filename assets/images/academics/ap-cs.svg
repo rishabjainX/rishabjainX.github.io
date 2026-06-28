@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 56" role="img" aria-label="AP Computer Science A">
-  <rect width="56" height="56" rx="8" fill="#1f2937"/>
-  <g transform="translate(28 28)" stroke="#a5b4fc" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M-9 -9 L-17 0 L-9 9"/>
-    <path d="M9 -9 L17 0 L9 9"/>
-    <path d="M-5 11 L5 -11"/>
-  </g>
-</svg>

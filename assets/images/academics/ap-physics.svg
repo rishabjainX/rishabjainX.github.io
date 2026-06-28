@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 56" role="img" aria-label="AP Physics C">
-  <rect width="56" height="56" rx="8" fill="#0c4a6e"/>
-  <g transform="translate(28 28)" stroke="#7dd3fc" stroke-width="1.7" fill="none">
-    <ellipse rx="17" ry="6.5"/>
-    <ellipse rx="17" ry="6.5" transform="rotate(60)"/>
-    <ellipse rx="17" ry="6.5" transform="rotate(120)"/>
-    <circle r="3" fill="#7dd3fc" stroke="none"/>
-  </g>
-</svg>

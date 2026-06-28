@@ -30,7 +30,7 @@ permalink: /academics/
 
   <div class="course-card">
     <span class="course-grade">A</span>
-    <img class="course-logo" src="{{ '/assets/images/academics/ap-physics-mech.svg' | relative_url }}" alt="">
+    <img class="course-logo" src="{{ '/assets/images/projects/mech.jpg' | relative_url }}" alt="">
     <div class="course-meta">
       <p class="course-code">AP</p>
       <h3 class="course-title">Physics C: Mechanics</h3>
@@ -39,7 +39,7 @@ permalink: /academics/
 
   <div class="course-card">
     <span class="course-grade">A</span>
-    <img class="course-logo" src="{{ '/assets/images/academics/ap-physics.svg' | relative_url }}" alt="">
+    <img class="course-logo" src="{{ '/assets/images/projects/em.jpg' | relative_url }}" alt="">
     <div class="course-meta">
       <p class="course-code">AP</p>
       <h3 class="course-title">Physics C: E&amp;M</h3>
@@ -48,7 +48,7 @@ permalink: /academics/
 
   <div class="course-card">
     <span class="course-grade">5</span>
-    <img class="course-logo" src="{{ '/assets/images/academics/ap-calc.svg' | relative_url }}" alt="">
+    <img class="course-logo" src="{{ '/assets/images/projects/bc.jpg' | relative_url }}" alt="">
     <div class="course-meta">
       <p class="course-code">AP</p>
       <h3 class="course-title">Calculus BC</h3>
@@ -57,7 +57,7 @@ permalink: /academics/
 
   <div class="course-card">
     <span class="course-grade">A</span>
-    <img class="course-logo" src="{{ '/assets/images/academics/ap-cs.svg' | relative_url }}" alt="">
+    <img class="course-logo" src="{{ '/assets/images/projects/apcsa.jpg' | relative_url }}" alt="">
     <div class="course-meta">
       <p class="course-code">AP</p>
       <h3 class="course-title">Computer Science A</h3>
