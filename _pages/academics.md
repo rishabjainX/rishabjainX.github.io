@@ -50,6 +50,7 @@ permalink: /academics/
 <div class="results">
   <div class="result-chip"><span class="result-grade">A</span><span class="result-course">AP United States History</span></div>
   <div class="result-chip"><span class="result-grade">A</span><span class="result-course">AP Spanish Language</span></div>
+  <span class="result-break" aria-hidden="true"></span>
   <div class="result-chip"><span class="result-grade">5</span><span class="result-course">AP Calculus BC</span></div>
   <div class="result-chip"><span class="result-grade">5</span><span class="result-course">AP Chemistry</span></div>
   <div class="result-chip"><span class="result-grade">5</span><span class="result-course">AP World History</span></div>
