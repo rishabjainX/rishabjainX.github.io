@@ -9,7 +9,8 @@ permalink: /academics/
 ## Coursework
 
 <div class="course-grid">
-  <div class="course-card">
+  <div class="course-card course-card--current">
+    <span class="course-grade course-grade--current">Now</span>
     <img class="course-logo" src="{{ '/assets/images/projects/uiuc.png' | relative_url }}" alt="">
     <div class="course-meta">
       <p class="course-code">MATH 241</p>
@@ -23,14 +24,14 @@ permalink: /academics/
     <img class="course-logo" src="{{ '/assets/images/projects/uiuc.png' | relative_url }}" alt="">
     <div class="course-meta">
       <p class="course-code">MATH 257</p>
-      <h3 class="course-title">Linear Algebra</h3>
+      <h3 class="course-title">Linear Algebra with Computational Applications</h3>
       <p class="course-org">University of Illinois Urbana-Champaign</p>
     </div>
   </div>
 
   <div class="course-card">
     <span class="course-grade">A</span>
-    <img class="course-logo" src="{{ '/assets/images/projects/mech.jpg' | relative_url }}" alt="">
+    <img class="course-logo" src="{{ '/assets/images/academics/mech.jpg' | relative_url }}" alt="">
     <div class="course-meta">
       <p class="course-code">AP</p>
       <h3 class="course-title">Physics C: Mechanics</h3>
@@ -39,16 +40,16 @@ permalink: /academics/
 
   <div class="course-card">
     <span class="course-grade">A</span>
-    <img class="course-logo" src="{{ '/assets/images/projects/em.jpg' | relative_url }}" alt="">
+    <img class="course-logo" src="{{ '/assets/images/academics/em.jpg' | relative_url }}" alt="">
     <div class="course-meta">
       <p class="course-code">AP</p>
-      <h3 class="course-title">Physics C: E&amp;M</h3>
+      <h3 class="course-title">Physics C: Electricity and Magnetism</h3>
     </div>
   </div>
 
   <div class="course-card">
     <span class="course-grade">5</span>
-    <img class="course-logo" src="{{ '/assets/images/projects/bc.jpg' | relative_url }}" alt="">
+    <img class="course-logo" src="{{ '/assets/images/academics/bc.jpg' | relative_url }}" alt="">
     <div class="course-meta">
       <p class="course-code">AP</p>
       <h3 class="course-title">Calculus BC</h3>
@@ -57,7 +58,7 @@ permalink: /academics/
 
   <div class="course-card">
     <span class="course-grade">A</span>
-    <img class="course-logo" src="{{ '/assets/images/projects/apcsa.jpg' | relative_url }}" alt="">
+    <img class="course-logo" src="{{ '/assets/images/academics/apcsa.jpg' | relative_url }}" alt="">
     <div class="course-meta">
       <p class="course-code">AP</p>
       <h3 class="course-title">Computer Science A</h3>
