@@ -295,6 +295,152 @@ code { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: .9em; 
   .project-image { flex: 0 0 64px; width: 64px; height: 64px; }
 }
 
+// ---------- Academics: course cards ----------
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .85rem;
+  margin: 1rem 0 0;
+}
+@media (max-width: 600px) {
+  .course-grid { grid-template-columns: 1fr; }
+}
+
+.course-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: .9rem 1rem;
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  background: var(--card-bg);
+  transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+  &:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent);
+    box-shadow: var(--shadow-hover);
+  }
+}
+
+.course-logo {
+  flex: 0 0 56px;
+  width: 56px;
+  height: 56px;
+  border-radius: 6px;
+  object-fit: contain;
+  background: var(--bg);
+  border: 1px solid var(--rule);
+}
+
+.course-meta { min-width: 0; }
+.course-code {
+  margin: 0;
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.course-title { margin: .1rem 0 .1rem; font-size: 1rem; }
+.course-org { margin: 0; color: var(--muted); font-size: .8rem; }
+
+// ---------- Academics: extras + AP pills ----------
+.course-extras { margin-top: 1.75rem; }
+
+.extras-line {
+  margin: 0 0 .85rem;
+  color: var(--muted);
+  font-size: .92rem;
+  .extras-label {
+    color: var(--fg);
+    font-weight: 600;
+    margin-right: .25rem;
+  }
+}
+
+.ap-scores {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .45rem;
+}
+.ap-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  padding: .3rem .7rem .3rem .55rem;
+  border-radius: 999px;
+  background: var(--card-bg);
+  border: 1px solid var(--rule);
+  font-size: .85rem;
+  color: var(--fg);
+  .score {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: #fff;
+    font-size: .72rem;
+    font-weight: 700;
+  }
+}
+
+// ---------- Academics: stack / proficiency bars ----------
+.stack-group {
+  margin-top: 1.75rem;
+  h3 {
+    margin: 0 0 .65rem;
+    font-size: .72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .14em;
+    color: var(--muted);
+    border: none;
+    padding: 0;
+  }
+}
+
+.stack-skill {
+  display: grid;
+  grid-template-columns: 130px 1fr 36px;
+  align-items: center;
+  gap: .9rem;
+  padding: .35rem 0;
+  font-size: .92rem;
+  .name { font-weight: 500; }
+  .bar {
+    height: 7px;
+    background: var(--rule);
+    border-radius: 999px;
+    overflow: hidden;
+  }
+  .fill {
+    height: 100%;
+    width: var(--target, 0%);
+    background: var(--accent);
+    border-radius: 999px;
+    animation: fillBar .9s cubic-bezier(.2, .7, .25, 1) both;
+  }
+  .pct {
+    text-align: right;
+    color: var(--muted);
+    font-size: .82rem;
+    font-variant-numeric: tabular-nums;
+    &::after { content: "%"; margin-left: 1px; }
+  }
+}
+
+@keyframes fillBar {
+  from { width: 0; }
+  to   { width: var(--target, 0%); }
+}
+
+@media (max-width: 520px) {
+  .stack-skill { grid-template-columns: 110px 1fr 34px; gap: .65rem; font-size: .88rem; }
+}
+
 // ---------- Activity entries ----------
 .activity {
   margin-bottom: 1.25rem;
