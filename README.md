@@ -20,18 +20,27 @@ All content lives in plain Markdown — no JavaScript build step.
 
 ## Preview locally
 
-You need Ruby (`ruby --version`). On macOS, the system Ruby works but is old; if you hit
-errors install a newer one via `brew install ruby` or `rbenv`.
+Requires Ruby ≥ 3.1. macOS system Ruby (2.6) is too old — use Homebrew's:
 
 ```bash
-# one-time setup
-bundle install
+brew install ruby
+# add to your shell PATH (zsh)
+echo 'export PATH="/opt/homebrew/opt/ruby/bin:$PATH"' >> ~/.zshrc
+source ~/.zshrc
+```
 
-# run the dev server
+Then from this directory:
+
+```bash
+bundle config set --local path 'vendor/bundle'   # one-time, keeps gems in ./vendor
+bundle install                                   # one-time
 bundle exec jekyll serve --livereload
 ```
 
 Open <http://127.0.0.1:4000>. Edits to Markdown / SCSS hot-reload.
+
+> If you'd rather not edit your PATH, prefix every command with
+> `/opt/homebrew/opt/ruby/bin/` (e.g. `/opt/homebrew/opt/ruby/bin/bundle exec jekyll serve`).
 
 ## Deploy to GitHub Pages
 
@@ -40,16 +49,13 @@ lives at the apex URL `https://rishabjainx.github.io`.
 
 ```bash
 # from this directory
-git init
-git add .
-git commit -m "Initial portfolio"
-git branch -M main
 git remote add origin https://github.com/rishabjainX/rishabjainX.github.io.git
 git push -u origin main
 ```
 
-Then on GitHub → repo Settings → Pages → set **Source: Deploy from a branch**, branch
-`main`, folder `/`. The site is live in ~1 minute.
+On GitHub → repo Settings → Pages → set **Source: GitHub Actions** (not "branch").
+The included workflow at `.github/workflows/pages.yml` builds with Jekyll 4 and deploys.
+Live in ~1–2 minutes after the first push.
 
 ## Notes
 
