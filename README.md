@@ -12,11 +12,10 @@ All content lives in plain Markdown — no JavaScript build step.
 | --- | --- |
 | Bio, news, photo on the home page | `index.md` |
 | Project cards | `_pages/projects.md` |
-| CV / resume content | `_pages/cv.md` |
-| Site title, links, email | `_config.yml` |
+| Activities page | `_pages/activities.md` |
+| Site title, social handles | `_config.yml` |
 | Colors, fonts, layout | `assets/css/style.scss` |
 | Headshot | `assets/images/profile.png` |
-| Downloadable resume PDF | `assets/files/rishab-jain-cv.pdf` |
 
 ## Preview locally
 
@@ -59,7 +58,8 @@ Live in ~1–2 minutes after the first push.
 
 ## Notes
 
-- Home-page address and phone number from the resume are intentionally omitted for privacy.
-  Email is included.
-- The PDF in `assets/files/` is the same resume parsed for the site — replace it when you
-  update the document and the CV page download link will pick up the new version.
+- The email icon on the home page never exposes the address in HTML. The username and
+  domain are base64-encoded in `data-*` attributes; a small inline script assembles the
+  `mailto:` link only when the icon is clicked. To change the address, update the two
+  `data-u` / `data-d` base64 strings in `index.md` (encode with
+  `printf '%s' <part> | base64`).
