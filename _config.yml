@@ -1,0 +1,44 @@
+title: Rishab Jain
+tagline: Computer scientist · AI governance · Student advocate
+author:
+  name: Rishab Jain
+  email: rishabjain10x@gmail.com
+  location: Fremont, CA
+  linkedin: rishabjainx
+  github: rishabjainX
+
+description: >-
+  Personal site of Rishab Jain — high-school computer scientist working on
+  AI governance, algorithmic fairness, and equitable juvenile-justice
+  interventions.
+
+url: "https://rishabjainx.github.io"
+baseurl: ""
+
+include:
+  - _pages
+
+permalink: /:title/
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+sass:
+  style: compressed
+  sass_dir: _sass
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - node_modules
+  - README.md
+  - .sass-cache

@@ -1,0 +1,236 @@
+---
+---
+
+// AcademicPages-inspired minimal portfolio styles
+
+:root {
+  --bg: #ffffff;
+  --fg: #1a1a1a;
+  --muted: #5a6472;
+  --rule: #e6e8ec;
+  --accent: #1f4e8b;
+  --accent-hover: #143661;
+  --card-bg: #fafbfc;
+  --max-width: 760px;
+  --serif: "Source Serif Pro", "Iowan Old Style", "Apple Garamond", Georgia, serif;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--sans);
+  font-size: 17px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  &:focus { left: 1rem; top: 1rem; background: var(--fg); color: #fff; padding: .5rem .75rem; z-index: 1000; }
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+// ---------- Header / nav ----------
+.site-header {
+  border-bottom: 1px solid var(--rule);
+  background: #fff;
+  position: sticky; top: 0; z-index: 10;
+  backdrop-filter: saturate(180%) blur(8px);
+  background-color: rgba(255,255,255,.92);
+}
+.nav-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: .9rem 1.5rem;
+  gap: 1rem;
+}
+.site-name {
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--fg);
+  text-decoration: none;
+  letter-spacing: -.01em;
+}
+.site-nav {
+  display: flex;
+  gap: 1.25rem;
+  a {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: .95rem;
+    padding: .25rem 0;
+    border-bottom: 2px solid transparent;
+    transition: color .15s, border-color .15s;
+    &:hover { color: var(--fg); }
+    &.active { color: var(--fg); border-bottom-color: var(--accent); }
+  }
+}
+
+// ---------- Typography ----------
+main { padding: 2.5rem 0 4rem; }
+
+h1, h2, h3, h4 { line-height: 1.25; letter-spacing: -.015em; }
+h1 { font-size: 2rem; margin: 0 0 .25rem; }
+h2 {
+  font-size: 1.35rem;
+  margin: 2.25rem 0 .75rem;
+  padding-bottom: .35rem;
+  border-bottom: 1px solid var(--rule);
+}
+h3 { font-size: 1.1rem; margin: 1.5rem 0 .35rem; }
+p { margin: 0 0 1rem; }
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { color: var(--accent-hover); text-decoration: underline; }
+
+ul { padding-left: 1.25rem; }
+li { margin-bottom: .35rem; }
+
+hr { border: none; border-top: 1px solid var(--rule); margin: 2rem 0; }
+
+code { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: .9em; background: var(--card-bg); padding: .1em .35em; border-radius: 3px; }
+
+// ---------- Home: profile block ----------
+.profile {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 1.75rem;
+  align-items: start;
+  margin-bottom: 1.5rem;
+}
+.profile-photo {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--rule);
+}
+.profile-meta {
+  .tagline {
+    color: var(--muted);
+    font-size: 1rem;
+    margin: .15rem 0 .75rem;
+  }
+}
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .9rem;
+  font-size: .9rem;
+  a {
+    color: var(--muted);
+    &:hover { color: var(--accent); }
+  }
+}
+
+@media (max-width: 600px) {
+  .profile { grid-template-columns: 1fr; text-align: center; }
+  .profile-photo { width: 150px; height: 150px; margin: 0 auto; }
+  .socials { justify-content: center; }
+}
+
+// ---------- News list ----------
+.news {
+  list-style: none;
+  padding-left: 0;
+  li {
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    gap: 1rem;
+    padding: .5rem 0;
+    border-bottom: 1px dashed var(--rule);
+    &:last-child { border-bottom: none; }
+  }
+  .date { color: var(--muted); font-size: .9rem; font-variant-numeric: tabular-nums; }
+}
+
+@media (max-width: 520px) {
+  .news li { grid-template-columns: 1fr; gap: .15rem; }
+}
+
+// ---------- Project cards ----------
+.project {
+  padding: 1.1rem 1.25rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  background: var(--card-bg);
+  h3 {
+    margin: 0 0 .35rem;
+    font-size: 1.1rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: .6rem;
+  }
+  .meta {
+    color: var(--muted);
+    font-size: .85rem;
+    font-weight: 400;
+  }
+  .tags {
+    margin-top: .6rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4rem;
+    span {
+      font-size: .75rem;
+      color: var(--muted);
+      background: #fff;
+      border: 1px solid var(--rule);
+      border-radius: 999px;
+      padding: .15rem .55rem;
+    }
+  }
+  p { margin: .25rem 0 0; font-size: .96rem; }
+}
+
+// ---------- CV layout ----------
+.cv-entry {
+  margin-bottom: 1.25rem;
+  .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .role { font-weight: 600; }
+  .org { color: var(--muted); }
+  .date { color: var(--muted); font-size: .9rem; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  ul { margin: .35rem 0 0; }
+}
+
+.cv-download {
+  display: inline-block;
+  margin-top: .5rem;
+  padding: .4rem .8rem;
+  border: 1px solid var(--accent);
+  border-radius: 4px;
+  font-size: .9rem;
+  &:hover { background: var(--accent); color: #fff; text-decoration: none; }
+}
+
+// ---------- Footer ----------
+.site-footer {
+  border-top: 1px solid var(--rule);
+  padding: 1.5rem 0;
+  color: var(--muted);
+  font-size: .85rem;
+  text-align: center;
+  a { color: var(--muted); }
+  a:hover { color: var(--accent); }
+}
